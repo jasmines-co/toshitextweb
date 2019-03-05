@@ -5,7 +5,7 @@ const util = require('util');
 const config = require('./config/config');
 
 const app = require('./config/express');
-const debug = require('debug')('auth-api-starterpack:index');
+const debug = require('debug')('toshi-text-launchsite:index');
 
 mongoose.Promise = Promise;
 

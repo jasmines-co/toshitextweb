@@ -7,6 +7,25 @@ const config = require('./config/config');
 const app = require('./config/express');
 const debug = require('debug')('toshi-text-launchsite:index');
 
+// eslint-disable-next-line no-unused-vars
+const fs = require('fs');
+
+// eslint-disable-next-line no-unused-vars
+const multer = require('multer');
+
+const hbs = require('express-handlebars');
+
+app.engine('hbs', hbs({
+  extname: 'hbs',
+  defaultLayout: 'layout',
+  // eslint-disable-next-line no-path-concat
+  layoutsDir: __dirname + '/views/layouts', // eslint-disable-line prefer-template
+  // eslint-disable-next-line no-path-concat
+  partialsDir: __dirname + '/views/partials' // eslint-disable-line prefer-template
+}));
+
+app.set('view engine', 'hbs');
+
 mongoose.Promise = Promise;
 
 // connect to mongo db

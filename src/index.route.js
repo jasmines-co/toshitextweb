@@ -1,16 +1,21 @@
 const express = require('express');
-const authRoutes = require('./server/auth/auth.route');
+// const adminRoutes = require('./server/auth/auth.route');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-router.use('/auth', authRoutes);
+const team = require('./server/team/team.route')
 
-router.get('/', (req, res) => {
+router.get('/', (res) => {
   res.render('launchpage');
 });
 
-router.get('/team', (req, res) => {
-  res.render('team');
+router.use('/team', team);
+
+router.use('/admin', (res) => {
+  // eslint-disable-next-line no-undef
+  adminlayout = 'adminlayout.hbs';
+  // eslint-disable-next-line no-undef
+  res.render('launchpage', { layout: adminlayout });
 });
 
 module.exports = router;

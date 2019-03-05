@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('../index.route');
+const hbs = require('express-handlebars');
 
 const app = express();
 
@@ -11,9 +12,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS - Cross Origin Resource Sharing.
 app.use(cors());
 
-// Mount all routes on /api path.
-app.use('/api', routes);
+app.engine('hbs', hbs({ 
+    extname: 'hbs', 
+    defaultLayout: 'main', 
+    layoutsDir: __dirname + '/client/views/layouts/',
+    partialsDir: __dirname + '/client/views/partials/'
+}));
 
-// #TODO: Additional non-API routes go here.
+app.set('view engine', 'hbs');
+
+// Mount all routes on /api path.
+app.use('/', routes);
 
 module.exports = app;

@@ -20,7 +20,8 @@
     "test:watch": "yarn test -- --watch",
     "test:coverage": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors server --recursive",
     "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
-    "report-coverage": "coveralls < ./coverage/lcov.info"
+    "report-coverage": "coveralls < ./coverage/lcov.info",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -46,17 +47,21 @@
   ],
   "dependencies": {
     "body-parser": "1.18.2",
+    "bootstrap": "4.3.1",
     "cors": "2.8.4",
     "debug": "^2.4.5",
     "docsify-cli": "4.2.1",
     "dotenv": "^4.0.0",
     "express": "4.16.3",
+    "express-handlebars": "false3.0.2",
     "express-jwt": "5.3.1",
     "http-status": "1.0.1",
     "joi": "10.6.0",
+    "jquery": "1.9.1",
     "jsonwebtoken": "7.1.9",
     "method-override": "^2.3.10",
-    "mongoose": "4.7.4"
+    "mongoose": "4.7.4",
+    "popper.js": "^1.14.7"
   },
   "devDependencies": {
     "chai": "4.1.2",

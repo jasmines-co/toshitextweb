@@ -3,11 +3,11 @@ const express = require('express');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-const team = require('./server/team/team.route')
+const team = require('./server/team/team.route');
 
-router.get('/', (res) => {
-  res.render('launchpage');
-});
+const home = require('./server/launchpage');
+
+router.get('/', home);
 
 router.use('/team', team);
 

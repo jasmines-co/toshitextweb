@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const util = require('util');
+const express = require('express')
 
 // config should be imported before importing any other file
 const config = require('./config/config');
@@ -25,6 +26,9 @@ app.engine('hbs', hbs({
 }));
 
 app.set('view engine', 'hbs');
+
+app.use(express.static('./public/img'));
+app.use(express.static('./public/style')); 
 
 mongoose.Promise = Promise;
 

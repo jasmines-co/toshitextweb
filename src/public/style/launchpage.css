@@ -1,0 +1,106 @@
+body {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+body::after {
+    content: "";
+    background-image: url("abstractgrey.jpg");
+    background-size:cover;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+h1 {
+    font-size: 40px;
+}
+.containerlogo {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    width: 20%;
+    border-radius: 10%;
+}
+
+.homelink {
+    margin-left: 1px;
+    padding-left: 8px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-style: solid;
+    border-left-color:#063284;
+    border-bottom-color:transparent;
+    border-top-color: #063284;
+    border-right-color: transparent;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.nav-link {
+    padding: 0 !important;
+    border-style: solid;
+    border-left-color:transparent;
+    border-bottom-color: #063284;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.nav-item {
+    margin-left:6px;
+    margin-right:6px
+}
+.slogan {
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.containerabout {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+a {
+    color: #063284 !important;
+}
+
+a:hover { color: #ffb600ff !important; }
+
+.nav a {
+    color: #ffb600ff !important;
+    text-align: center;
+}
+
+.d-inline-flex {
+    border-style: solid !important;
+    border-color: #ffb600ff !important;
+}
+
+.navcontainer {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav .nav-link {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-style: none;
+}

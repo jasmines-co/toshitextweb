@@ -129,7 +129,7 @@ heroku create my-cool-app-name
 git remote -v
 heroku ps:scale web=1
 heroku addons:create mongolab:sandbox
-git push heroku master
+git subtree push --prefix src heroku master
 ```
 
 ## Live Version 
